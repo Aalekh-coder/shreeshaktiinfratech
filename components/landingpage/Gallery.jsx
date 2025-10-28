@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const galleryImages = [
   { src: "/products/asg/Anti-Fog-Cannon-Machine/1.webp", link: "/products/anti-fog-cannon-machine", name: "Anti Fog Cannon Machine" },
-  { src: "/products/ror/RIDE ON ROLLER/1.webp", link: "/products/ride-on-roller", name: "Ride On Roller" },
+  { src: "/products/ror/ride/1.webp", link: "/products/ride-on-roller", name: "Ride On Roller" },
   { src: "/products/bpm/Automatic Bar Bender/1.webp", link: "/products/bar-bending-machine", name: "Automatic Bar Bender" },
   { src: "/products/cm/CONCRETE MIXER/1.webp", link: "/products/concrete-mixer", name: "Concrete Mixer" },
   { src: "/products/lte/HOT AIR OVEN/1.webp", link: "/products/hot-air-oven", name: "Hot Air Oven" },
