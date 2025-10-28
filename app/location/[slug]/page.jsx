@@ -3,6 +3,7 @@
 import React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
@@ -134,6 +135,7 @@ const page = ({ heading, heading2 }) => {
   };
   return (
     <div className="">
+      <Navbar/>
      <AccordionHero/>
 
       <h1 className="mt-5 text-2xl px-2 font-bold text-center md:text-4xl mb-5 lg:mt-20">
