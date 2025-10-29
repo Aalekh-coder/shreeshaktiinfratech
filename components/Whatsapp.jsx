@@ -1,18 +1,15 @@
 // WhatsAppChat.jsx
 'use client'
+import { Phone } from "lucide-react";
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
 
 const Whatsapp = () => {
   return (
     <a
-      href="https://wa.me/+918826544443"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp with Shree Shakti Infratech"
-      className="block md:hidden fixed bottom-5 right-1 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition"
+      href="tel:+918826544443"
+      className=" fixed bottom-5 right-1 z-50 bg-red-500 text-white p-1 rounded-full shadow-lg hover:bg-red-600 transition animate-bounce h-10 w-10 flex items-center justify-center lg:w-14 lg:h-14"
     >
-      <FaWhatsapp size={28} />
+      <Phone size={22}  />
     </a>
   );
 };

@@ -72,7 +72,7 @@ const products = [
     id: 52,
     badge: "Hot Selling",
     name: "Ride On Roller",
-    image: "/products/ror/RIDE ON ROLLER/1.webp",
+    image: "/products/ror/ride/1.webp",
     details: {
       Model: "SSI-SMT-700",
       "Walking/Driving Speed": "0-4 Km/H",

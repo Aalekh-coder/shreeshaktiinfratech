@@ -10,8 +10,8 @@ import Link from "next/link";
 
 import OnClickPop from "@/components/OnClickPop";
 import { locationProductCardData } from "@/components/static/data";
-import Cta2 from "@/components/landingpage/Cta2";
 import AccordionHero from "@/components/landingpage/Hero";
+import Footer from "@/components/landingpage/Footer";
 
 const page = ({ heading, heading2 }) => {
   const params = useParams();
@@ -135,19 +135,19 @@ const page = ({ heading, heading2 }) => {
   };
   return (
     <div className="">
-      <Navbar/>
-     <AccordionHero/>
+      <Navbar />
+      <AccordionHero />
 
       <h1 className="mt-5 text-2xl px-2 font-bold text-center md:text-4xl mb-5 lg:mt-20">
         Bar Bending Machine Supplier in{" "}
-        <span className="capitalize">{params?.slug}</span>
+        <span className="capitalize">{params.slug.split("-")?.[5]}</span>
       </h1>
       <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg">
         Welcome to <span className="font-bold"> Shree Shakti Infratech</span>, a
         dependable name for{" "}
         <span className="font-bold">
           Bar Bending Machine Supplier in{" "}
-          <span className="capitalize">{params?.slug}</span>.
+          <span className="capitalize">{params.slug.split("-")?.[5]}</span>.
         </span>{" "}
         We are a transformative maker and supplier, providing brilliant
         solutions that change the landscape of quality, efficiency, and
@@ -204,30 +204,30 @@ const page = ({ heading, heading2 }) => {
       <section className="my-10">
         <h2 className="mt-5 text-2xl px-2 font-bold text-center md:text-3xl mb-5">
           Go with Shree Shakti Infratech – Bar Bending Machine Supplier in{" "}
-          <span className="capitalize">{params?.slug}</span>
+          <span className="capitalize">{params.slug.split("-")?.[5]}</span>
         </h2>
 
         <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg">
           If you're looking for{" "}
           <span className="font-bold capitalize">
-            Bar Bending Machine Supplier in {params?.slug}, Shree Shakti
+            Bar Bending Machine Supplier in {params.slug.split("-")?.[5]}, Shree Shakti
             Infratech
           </span>{" "}
           is an experienced supplier you can trust as a firm that works within
           the construction industry and the infrastructure industry. We provide
           reliable, high-performance machines, and with the backing of
           exceptional service and support anywhere in{" "}
-          <span className="capitalize">{params?.slug}</span>.
+          <span className="capitalize">{params.slug.split("-")?.[5]}</span>.
         </p>
 
         <h3 className="mt-5 text-xl px-2 font-bold text-center md:text-3xl mb-5 lg:mt-10">
           Complete Range of Bar Bending Machines in{" "}
-          <span className="capitalize">{params?.slug}</span>
+          <span className="capitalize">{params.slug.split("-")?.[5]}</span>
         </h3>
         <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg lg:mb-10">
           As a company that sells{" "}
           <span className="font-bold capitalize">
-            Bar Bending Machine Supplier in {params?.slug}
+            Bar Bending Machine Supplier in {params.slug.split("-")?.[5]}
           </span>
           , we are a trusted supplier and a full range of machine models — from
           small bar bending machines for small job sites to heavy-duty
@@ -243,7 +243,7 @@ const page = ({ heading, heading2 }) => {
         <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg lg:mb-10">
           At{" "}
           <span className="font-bold capitalize">
-            Shree Shakti Infratech {params?.slug}
+            Shree Shakti Infratech {params.slug.split("-")?.[5]}
           </span>
           , each and every model is built with high quality materials, undergo
           strict quality checks. Our bar bender is built to last and experiences
@@ -347,6 +347,8 @@ const page = ({ heading, heading2 }) => {
           ))}
         </div>
       </section>
+
+       <Footer />
     </div>
   );
 };
