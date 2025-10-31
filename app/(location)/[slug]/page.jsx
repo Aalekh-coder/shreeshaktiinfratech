@@ -12,11 +12,17 @@ import OnClickPop from "@/components/OnClickPop";
 import { locationProductCardData } from "@/components/static/data";
 import AccordionHero from "@/components/landingpage/Hero";
 import Footer from "@/components/landingpage/Footer";
+import CitesKeyword from "@/components/CitesKeyword";
 
 const page = ({ heading, heading2 }) => {
   const params = useParams();
   const [openFaq, setOpenFaq] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const city = params.slug
+    .split("in")
+    [params.slug.split("in").length - 1].split("-")
+    ?.slice(1)
+    ?.join("-");
 
   const faqs = [
     {
@@ -140,14 +146,14 @@ const page = ({ heading, heading2 }) => {
 
       <h1 className="mt-5 text-2xl px-2 font-bold text-center md:text-4xl mb-5 lg:mt-20">
         Bar Bending Machine Supplier in{" "}
-        <span className="capitalize">{params.slug.split("-")?.[5]}</span>
+        <span className="capitalize">{city}</span>
       </h1>
       <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg">
         Welcome to <span className="font-bold"> Shree Shakti Infratech</span>, a
         dependable name for{" "}
         <span className="font-bold">
           Bar Bending Machine Supplier in{" "}
-          <span className="capitalize">{params.slug.split("-")?.[5]}</span>.
+          <span className="capitalize">{city}</span>.
         </span>{" "}
         We are a transformative maker and supplier, providing brilliant
         solutions that change the landscape of quality, efficiency, and
@@ -204,30 +210,29 @@ const page = ({ heading, heading2 }) => {
       <section className="my-10">
         <h2 className="mt-5 text-2xl px-2 font-bold text-center md:text-3xl mb-5">
           Go with Shree Shakti Infratech – Bar Bending Machine Supplier in{" "}
-          <span className="capitalize">{params.slug.split("-")?.[5]}</span>
+          <span className="capitalize">{city}</span>
         </h2>
 
         <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg">
           If you're looking for{" "}
           <span className="font-bold capitalize">
-            Bar Bending Machine Supplier in {params.slug.split("-")?.[5]}, Shree Shakti
-            Infratech
+            Bar Bending Machine Supplier in {city}, Shree Shakti Infratech
           </span>{" "}
           is an experienced supplier you can trust as a firm that works within
           the construction industry and the infrastructure industry. We provide
           reliable, high-performance machines, and with the backing of
           exceptional service and support anywhere in{" "}
-          <span className="capitalize">{params.slug.split("-")?.[5]}</span>.
+          <span className="capitalize">{city}</span>.
         </p>
 
         <h3 className="mt-5 text-xl px-2 font-bold text-center md:text-3xl mb-5 lg:mt-10">
           Complete Range of Bar Bending Machines in{" "}
-          <span className="capitalize">{params.slug.split("-")?.[5]}</span>
+          <span className="capitalize">{city}</span>
         </h3>
         <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg lg:mb-10">
           As a company that sells{" "}
           <span className="font-bold capitalize">
-            Bar Bending Machine Supplier in {params.slug.split("-")?.[5]}
+            Bar Bending Machine Supplier in {city}
           </span>
           , we are a trusted supplier and a full range of machine models — from
           small bar bending machines for small job sites to heavy-duty
@@ -243,7 +248,7 @@ const page = ({ heading, heading2 }) => {
         <p className="px-2 md:px-10 my-5 lg:px-20 lg:text-lg lg:mb-10">
           At{" "}
           <span className="font-bold capitalize">
-            Shree Shakti Infratech {params.slug.split("-")?.[5]}
+            Shree Shakti Infratech {city}
           </span>
           , each and every model is built with high quality materials, undergo
           strict quality checks. Our bar bender is built to last and experiences
@@ -306,16 +311,6 @@ const page = ({ heading, heading2 }) => {
         </section>
       </div>
 
-      {/* <div className="bg-orange-100 my-20 mx-5 px-5 py-2 flex items-center justify-between md:mx-20 lg:w-[50vw] lg:mx-auto">
-        <img src="/location/hand-shake.png" alt="" className="h-20 w-auto" />
-        <div className="hidden md:block uppercase lg:text-xl">
-          Inviting application for <br />{" "}
-          <span className="font-bold">dealer partners</span>
-        </div>
-        <button className="font-bold text-white bg-orange-400 px-5 py-2 rounded-sm">
-          Know more
-        </button>
-      </div> */}
 
       {/* faq  */}
       <section className="px-2 md:px-10 lg:px-20 my-10">
@@ -347,8 +342,8 @@ const page = ({ heading, heading2 }) => {
           ))}
         </div>
       </section>
-
-       <Footer />
+      <CitesKeyword />
+      <Footer />
     </div>
   );
 };
