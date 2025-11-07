@@ -1,7 +1,5 @@
 export const serviceLocations = [
-  { href: "/Bar-bending-machine-supplier-in-uttar-pradesh", label: "Uttar Pradesh", id: 2 },
   { href: "/Bar-bending-machine-supplier-in-uttarakhand", label: "Uttarakhand", id: 3 },
-  { href: "/Bar-bending-machine-supplier-in-patna", label: "Patna", id: 4 },
   { href: "/Bar-bending-machine-supplier-in-delhi-ncr", label: "Delhi NCR", id: 5 },
   { href: "/Bar-bending-machine-supplier-in-bahadurgarh", label: "Bahadurgarh", id: 7 },
   { href: "/Bar-bending-machine-supplier-in-bengaluru", label: "Bengaluru", id: 8 },
