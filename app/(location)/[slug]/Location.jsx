@@ -278,7 +278,7 @@ const Location = ({ heading, heading2 }) => {
               <span className="text-[#FAAC18]">
                 Best Bar Bending Machine Supplier{" "}
               </span>{" "}
-              in India?{" "}
+              in {city}?{" "}
             </h2>
 
             <p className="text-base py-4 md:p-7 md:text-xl text-[#2C2C2C]">
@@ -295,7 +295,7 @@ const Location = ({ heading, heading2 }) => {
                 Request a Free Quote Today{" "}
               </span>{" "}
               and experience why we’re the preferred Bar Bending Machine
-              Supplier in India for contractors nationwide.{" "}
+              Supplier in {city} for contractors nationwide.{" "}
             </p>
 
             {/* CTA Button */}
