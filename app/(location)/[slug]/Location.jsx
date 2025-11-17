@@ -18,11 +18,14 @@ const Location = ({ heading, heading2 }) => {
   const params = useParams();
   const [openFaq, setOpenFaq] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const city = params.slug
-    .split("in")
-    [params.slug.split("in").length - 1].split("-")
-    ?.slice(1)
-    ?.join("-");
+  // const city = params.slug
+  //   .split("in")
+  //   [params.slug.split("in").length - 1].split("-")
+  //   ?.slice(1)
+  //   ?.join("-");
+
+  const city =params.slug?.split("-in-")?.[1];
+
 
   const faqs = [
     {
@@ -310,7 +313,6 @@ const Location = ({ heading, heading2 }) => {
           </div>
         </section>
       </div>
-
 
       {/* faq  */}
       <section className="px-2 md:px-10 lg:px-20 my-10">
