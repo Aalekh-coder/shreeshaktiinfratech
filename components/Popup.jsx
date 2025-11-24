@@ -1,10 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import axios from "axios";
 
 export default function PopupForm({ onClose, onOpen }) {
   const [isOpen, setIsOpen] = useState(onOpen || false);
-console.log("onOpen",onOpen);
+
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [machine, setMachine] = useState("");
+  const [message, setMessage] = useState("");
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
@@ -34,19 +44,81 @@ console.log("onOpen",onOpen);
     if (onClose) onClose();
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("Sending...");
+
+    try {
+      const formData = {
+        platform: "Shree Shakti Infratech Popup",
+        platformEmail: "shreeshaktiinfratech@gmail.com",
+        name,
+        phone,
+        email,
+        place:"N/A",
+        product: machine,
+        message,
+      };
+console.log(formData)
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        formData
+      );
+
+      if (data?.success) {
+        setLoading(false);
+        setStatus("✅ Message sent successfully!");
+
+        const whatsappText = `Hi, I am ${name}.
+        
+Email: ${email}
+Product: ${machine}
+
+Message: ${message}
+
+Contact: ${phone}`;
+
+        const waUrl = `https://wa.me/918826544443?text=${encodeURIComponent(
+          whatsappText
+        )}`;
+
+        setTimeout(() => {
+          window.open(waUrl, "_blank");
+        }, 1000);
+
+        setName("");
+        setPhone("");
+        setEmail("");
+        setMachine("");
+        setMessage("");
+
+        setTimeout(() => {
+          handleClose();
+        }, 3000);
+      } else {
+        setStatus("❌ Failed to send. Please try again.");
+        setLoading(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setStatus("❌ Server error. Try again later.");
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[3000] overflow-y-auto">
-      <div className="relative bg-white max-w-xs  md:max-w-lg  p-5 sm:p-10 rounded-lg shadow-lg ">
-        {/* Small Icon (Top-left) */}
+      <div className="relative bg-white max-w-xs md:max-w-lg p-5 sm:p-10 rounded-lg shadow-lg ">
+
         <Image
           src="/home/form.webp"
           alt="Popup Image"
           width={63}
           height={55}
-          className="hidden md:block absolute left-0 top-0 bottom-0 z-100  "
+          className="hidden md:block absolute left-0 top-0 bottom-0 z-100"
         />
 
-        {/* Close button */}
         <button
           className="absolute cursor-pointer top-3 right-3 text-gray-600 hover:text-black"
           onClick={handleClose}
@@ -54,70 +126,56 @@ console.log("onOpen",onOpen);
           ✕
         </button>
 
-        {/* Form Heading */}
-        <h2 className="text-lg sm:text-xl md:text-2xl font-bold  text-center">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center">
           Get Your <span className="text-[#FAAC18]">Free Quote Today!</span>
         </h2>
-        <p className="text-xs  sm:text-sm text-black mb-4 text-center z-200">
+        <p className="text-xs sm:text-sm text-black mb-4 text-center z-200">
           Looking for a reliable <b>Bar Bending Machine</b> or other
           construction equipment? Tell us your requirement and get the best
           price quote, fast and hassle-free.
         </p>
 
-        {/* Form */}
-        <form
-          action="https://formsubmit.co/shreeshaktiinfratech@gmail.com"
-          method="POST"
-          className="space-y-2 md:ml-3"
-        >
-          <input type="hidden" name="_sponsor" value="false" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Enquiry from Website"
-          />
-          <input type="hidden" name="_nosponsor" value="false" />
-          <input
-            type="hidden"
-            name="_autoresponse"
-            value="Thank you for reaching out! We will get back to you shortly."
-          />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_cc" value="shrutiguptabhu@gmail.com" />
+        <form className="space-y-2 md:ml-3" onSubmit={handleSubmit}>
 
-          {/* Name */}
           <input
             type="text"
-            name="name"
-            placeholder="Name"
             required
+            disabled={loading}
+            placeholder="Name"
             className="w-full p-3 rounded-md bg-[#FFF3E0] border border-gray-300 text-sm sm:text-base"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
 
-          {/* Mobile */}
           <input
             type="tel"
-            name="mobile"
-            placeholder="Mobile No."
             required
+            disabled={loading}
+            placeholder="Mobile No."
             className="w-full p-3 rounded-md bg-[#FFF3E0] border border-gray-300 text-sm sm:text-base"
+            value={phone}
+            minLength={10}
+            maxLength={10}
+            pattern="[0-9]{10}"
+            onChange={(e) => setPhone(e.target.value)}
           />
 
-          {/* Email */}
           <input
             type="email"
-            name="email"
-            placeholder="Email Address"
             required
+            disabled={loading}
+            placeholder="Email Address"
             className="w-full p-3 rounded-md bg-[#FFF3E0] border border-gray-300 text-sm sm:text-base"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
-          {/* Select Machine */}
           <select
-            name="machine"
             required
+            disabled={loading}
             className="w-full p-3 rounded-md bg-[#FAAC18] border border-gray-300 text-sm sm:text-base"
+            value={machine}
+            onChange={(e) => setMachine(e.target.value)}
           >
             <option value="">Select Product</option>
             {categories.map((cat) => (
@@ -127,21 +185,37 @@ console.log("onOpen",onOpen);
             ))}
           </select>
 
-          {/* Message */}
           <textarea
-            name="message"
-            placeholder="Message for us..."
             rows="3"
+            required
+            disabled={loading}
+            placeholder="Message for us..."
             className="w-full p-3 rounded-md bg-[#FFF3E0] border border-gray-300 text-sm sm:text-base"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
 
-          {/* Submit Button */}
           <button
             type="submit"
+            disabled={loading}
             className="w-full cursor-pointer py-3 rounded-full bg-black text-white font-medium hover:bg-gray-800 transition text-sm sm:text-base"
           >
-            Send My Enquiry
+            {loading ? "Submitting..." : "Send My Enquiry"}
           </button>
+
+          {status && (
+            <p
+              className={`text-center mt-2 text-sm font-medium p-2 rounded-lg ${
+                status.startsWith("✅")
+                  ? "bg-green-100 text-green-800"
+                  : status.startsWith("❌")
+                  ? "bg-red-100 text-red-800"
+                  : "bg-yellow-100 text-yellow-800"
+              }`}
+            >
+              {status}
+            </p>
+          )}
         </form>
       </div>
     </div>

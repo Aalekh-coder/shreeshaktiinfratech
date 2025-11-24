@@ -5703,89 +5703,89 @@ export const products = [
       "Shree Shakti Infratech is a leading Weight Balance Machine Manufacturer in India. High-precision digital and mechanical balance machines for laboratories, construction testing, and industrial applications.",
   },
 
-  {
-    id: 54,
-    slug: "silt-jar-plastic-glass",
-    name: "Silt Jar Plastic / Glass (250ml, 500ml, 750ml, 1000ml)",
-    category: "lab-testing-equipment",
-    model: "SSI-SJ-01",
-    image: {
-      src: "/products/lte/SILT/1.webp",
-      alt: "Silt Jar Plastic and Glass",
-    },
+  // {
+  //   id: 54,
+  //   slug: "silt-jar-plastic-glass",
+  //   name: "Silt Jar Plastic / Glass (250ml, 500ml, 750ml, 1000ml)",
+  //   category: "lab-testing-equipment",
+  //   model: "SSI-SJ-01",
+  //   image: {
+  //     src: "/products/lte/SILT/1.webp",
+  //     alt: "Silt Jar Plastic and Glass",
+  //   },
 
-    description: [
-      { type: "h2", text: "Product Overview of Silt Jar Plastic / Glass" },
-      {
-        type: "ul",
-        items: [
-          "Shree Shakti Infratech is a trusted <strong>Silt Jar Manufacturer</strong> in India, offering both <strong>Plastic Silt Jars</strong> and <strong>Glass Silt Jars</strong> for accurate soil testing applications.",
-          "These <strong>Silt Testing Jars</strong> are widely used in laboratories to determine the silt content in sand and other fine aggregates.",
-          "Available in multiple capacities: <strong>250ml, 500ml, 750ml, and 1000ml</strong>, suitable for varied testing requirements.",
-          "We supply durable, transparent, and easy-to-use <strong>Soil Testing Silt Jars</strong> that comply with standard testing practices.",
-        ],
-      },
-      { type: "h2", text: "Key Features of Silt Jar" },
-      {
-        type: "ul",
-        items: [
-          "<strong>Material Options:</strong> Available in high-quality <strong>Plastic</strong> and <strong>Glass</strong>.",
-          "<strong>Multiple Sizes:</strong> 250ml, 500ml, 750ml, and 1000ml options available.",
-          "<strong>Graduated Markings:</strong> Clear measurement scale for accurate readings.",
-          "<strong>Durable Design:</strong> Strong, reusable, and resistant to laboratory conditions.",
-          "<strong>Easy Handling:</strong> Lightweight and transparent for convenient usage.",
-          "<strong>Accurate Testing:</strong> Ensures reliable determination of silt content in sand.",
-        ],
-      },
-      { type: "h2", text: "Applications of Silt Jar" },
-      {
-        type: "ul",
-        items: [
-          "<strong>Soil Testing Laboratories:</strong> Used for determining silt content in sand.",
-          "<strong>Construction Quality Control:</strong> Helps ensure compliance with IS standards for building materials.",
-          "<strong>Educational Institutes:</strong> Ideal for teaching soil mechanics and material testing.",
-          "<strong>Research & Development:</strong> Suitable for R&D applications in civil engineering labs.",
-        ],
-      },
-      { type: "h2", text: "Additional Information on Silt Jar" },
-      {
-        type: "ul",
-        items: [
-          "Manufactured using premium-grade <strong>Plastic</strong> and <strong>Glass</strong> materials.",
-          "Available in both <strong>individual pieces</strong> and <strong>sets</strong> for laboratory use.",
-          "Accurate graduation markings as per <strong>IS standards</strong> for soil testing equipment.",
-          "Easy to clean, store, and handle during routine laboratory work.",
-        ],
-      },
-      {
-        type: "h2",
-        text: "Why Choose Shree Shakti Infratech as Your Silt Jar Supplier?",
-      },
-      {
-        type: "ul",
-        items: [
-          "<strong>Wide Range:</strong> Plastic and Glass Silt Jars available in multiple sizes.",
-          "<strong>Laboratory Tested:</strong> Designed as per <strong>IS: 2386</strong> and other soil testing standards.",
-          "<strong>Durable Quality:</strong> Long-lasting jars with precise graduations.",
-          "<strong>Affordable Pricing:</strong> Competitive cost without compromising accuracy.",
-          "<strong>Trusted Brand:</strong> Reliable <strong>Silt Jar Manufacturer in India</strong> with nationwide supply.",
-        ],
-      },
-    ],
-    specs: [
-      { label: "Material", value: "Plastic / Glass" },
-      { label: "Sizes Available", value: "250ml, 500ml, 750ml, 1000ml" },
-      { label: "Application", value: "Determination of silt content in sand" },
-      { label: "Graduation", value: "Clear markings for accurate measurement" },
-      { label: "Model Name/Number", value: "SSI-SJ-01" },
-      { label: "Type", value: "Laboratory Testing Jar" },
-      { label: "Country of Origin", value: "Made in India" },
-    ],
-    metaTitle:
-      "Silt Jar Plastic / Glass (250ml, 500ml, 750ml, 1000ml) - Soil Testing Equipment",
-    metaDescription:
-      "Buy Silt Jar Plastic / Glass (250ml, 500ml, 750ml, 1000ml) from Shree Shakti Infratech. Durable and accurate soil testing silt jars with clear graduations for laboratory and construction quality control.",
-  },
+  //   description: [
+  //     { type: "h2", text: "Product Overview of Silt Jar Plastic / Glass" },
+  //     {
+  //       type: "ul",
+  //       items: [
+  //         "Shree Shakti Infratech is a trusted <strong>Silt Jar Manufacturer</strong> in India, offering both <strong>Plastic Silt Jars</strong> and <strong>Glass Silt Jars</strong> for accurate soil testing applications.",
+  //         "These <strong>Silt Testing Jars</strong> are widely used in laboratories to determine the silt content in sand and other fine aggregates.",
+  //         "Available in multiple capacities: <strong>250ml, 500ml, 750ml, and 1000ml</strong>, suitable for varied testing requirements.",
+  //         "We supply durable, transparent, and easy-to-use <strong>Soil Testing Silt Jars</strong> that comply with standard testing practices.",
+  //       ],
+  //     },
+  //     { type: "h2", text: "Key Features of Silt Jar" },
+  //     {
+  //       type: "ul",
+  //       items: [
+  //         "<strong>Material Options:</strong> Available in high-quality <strong>Plastic</strong> and <strong>Glass</strong>.",
+  //         "<strong>Multiple Sizes:</strong> 250ml, 500ml, 750ml, and 1000ml options available.",
+  //         "<strong>Graduated Markings:</strong> Clear measurement scale for accurate readings.",
+  //         "<strong>Durable Design:</strong> Strong, reusable, and resistant to laboratory conditions.",
+  //         "<strong>Easy Handling:</strong> Lightweight and transparent for convenient usage.",
+  //         "<strong>Accurate Testing:</strong> Ensures reliable determination of silt content in sand.",
+  //       ],
+  //     },
+  //     { type: "h2", text: "Applications of Silt Jar" },
+  //     {
+  //       type: "ul",
+  //       items: [
+  //         "<strong>Soil Testing Laboratories:</strong> Used for determining silt content in sand.",
+  //         "<strong>Construction Quality Control:</strong> Helps ensure compliance with IS standards for building materials.",
+  //         "<strong>Educational Institutes:</strong> Ideal for teaching soil mechanics and material testing.",
+  //         "<strong>Research & Development:</strong> Suitable for R&D applications in civil engineering labs.",
+  //       ],
+  //     },
+  //     { type: "h2", text: "Additional Information on Silt Jar" },
+  //     {
+  //       type: "ul",
+  //       items: [
+  //         "Manufactured using premium-grade <strong>Plastic</strong> and <strong>Glass</strong> materials.",
+  //         "Available in both <strong>individual pieces</strong> and <strong>sets</strong> for laboratory use.",
+  //         "Accurate graduation markings as per <strong>IS standards</strong> for soil testing equipment.",
+  //         "Easy to clean, store, and handle during routine laboratory work.",
+  //       ],
+  //     },
+  //     {
+  //       type: "h2",
+  //       text: "Why Choose Shree Shakti Infratech as Your Silt Jar Supplier?",
+  //     },
+  //     {
+  //       type: "ul",
+  //       items: [
+  //         "<strong>Wide Range:</strong> Plastic and Glass Silt Jars available in multiple sizes.",
+  //         "<strong>Laboratory Tested:</strong> Designed as per <strong>IS: 2386</strong> and other soil testing standards.",
+  //         "<strong>Durable Quality:</strong> Long-lasting jars with precise graduations.",
+  //         "<strong>Affordable Pricing:</strong> Competitive cost without compromising accuracy.",
+  //         "<strong>Trusted Brand:</strong> Reliable <strong>Silt Jar Manufacturer in India</strong> with nationwide supply.",
+  //       ],
+  //     },
+  //   ],
+  //   specs: [
+  //     { label: "Material", value: "Plastic / Glass" },
+  //     { label: "Sizes Available", value: "250ml, 500ml, 750ml, 1000ml" },
+  //     { label: "Application", value: "Determination of silt content in sand" },
+  //     { label: "Graduation", value: "Clear markings for accurate measurement" },
+  //     { label: "Model Name/Number", value: "SSI-SJ-01" },
+  //     { label: "Type", value: "Laboratory Testing Jar" },
+  //     { label: "Country of Origin", value: "Made in India" },
+  //   ],
+  //   metaTitle:
+  //     "Silt Jar Plastic / Glass (250ml, 500ml, 750ml, 1000ml) - Soil Testing Equipment",
+  //   metaDescription:
+  //     "Buy Silt Jar Plastic / Glass (250ml, 500ml, 750ml, 1000ml) from Shree Shakti Infratech. Durable and accurate soil testing silt jars with clear graduations for laboratory and construction quality control.",
+  // },
 
   // new product
   {
