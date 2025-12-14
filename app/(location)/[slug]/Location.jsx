@@ -4,11 +4,10 @@ import React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
-
+import Enquiry from "@/components/Enquiry";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
-import OnClickPop from "@/components/OnClickPop";
 import { locationProductCardData } from "@/components/static/data";
 import AccordionHero from "@/components/landingpage/Hero";
 import Footer from "@/components/landingpage/Footer";
@@ -17,7 +16,7 @@ import CitesKeyword from "@/components/CitesKeyword";
 const Location = ({ heading, heading2 }) => {
   const params = useParams();
   const [openFaq, setOpenFaq] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+
   // const city = params.slug
   //   .split("in")
   //   [params.slug.split("in").length - 1].split("-")
@@ -26,7 +25,7 @@ const Location = ({ heading, heading2 }) => {
 
   const city =params.slug?.split("-in-")?.[1];
 
-
+  const [isFormOpen, setIsFormOpen] = useState(false)
   const faqs = [
     {
       q: `1. What types of bar bending machines do you supply in ${params.slug}?`,
@@ -196,7 +195,7 @@ const Location = ({ heading, heading2 }) => {
                   View Details
                 </Link>
                 <button
-                  onClick={() => setIsOpen(true)}
+                  onClick={() => setIsFormOpen(true)}
                   className="bg-gray-800 px-2 py-1 text-white rounded-lg hover:bg-gray-900"
                 >
                   Enquiry Now
@@ -204,8 +203,9 @@ const Location = ({ heading, heading2 }) => {
               </div>
             </div>
           )
+
         )}
-        <OnClickPop isOpen={isOpen} setIsOpen={setIsOpen} />
+    
       </section>
 
       {/* other heading  */}
@@ -304,7 +304,7 @@ const Location = ({ heading, heading2 }) => {
             {/* CTA Button */}
             <div className="flex justify-center">
               <button
-                onClick={() => setIsOpen(true)}
+                onClick={() => setIsFormOpen(true)}
                 className="bg-[#fef3c7] text-xl border-2 my-10 cursor-pointer font-bold py-2 px-4 border-yellow-500 hover:underline hover:scale-105 transition-all duration-300 ease-out"
               >
                 Get Free Consultation Today!{" "}
@@ -346,6 +346,11 @@ const Location = ({ heading, heading2 }) => {
       </section>
       <CitesKeyword />
       <Footer />
+
+
+          {isFormOpen && (
+        <Enquiry isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      )}
     </div>
   );
 };
