@@ -12,11 +12,39 @@ const roboto = Roboto({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://barbendingmachinesupplier.com"),
 
-  title: "Bar Bending Machine Supplier in India",
-  description: "Bar Bending Machine Supplier-Shree Shakti Infratech are the most accurate machine that offer you efficient performance",
+  title: {
+    default: "Bar Bending Machine Supplier in India",
+    template: "%s | Shree Shakti Infratech",
+  },
+
+  description:
+    "Bar Bending Machine Supplier - Shree Shakti Infratech offers highly accurate machines with efficient performance.",
+
+  alternates: {
+    canonical: "/",
+  },
+
   icons: {
-    icon: "/logo.png", 
+    icon: "/logo.png",
+  },
+
+  openGraph: {
+    title: "Bar Bending Machine Supplier in India",
+    description:
+      "Shree Shakti Infratech offers highly accurate bar bending machines with efficient performance.",
+    url: "https://barbendingmachinesupplier.com",
+    siteName: "Shree Shakti Infratech",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
   },
 };
 
