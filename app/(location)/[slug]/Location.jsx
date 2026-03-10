@@ -23,12 +23,12 @@ const Location = ({ heading, heading2 }) => {
   //   ?.slice(1)
   //   ?.join("-");
 
-  const city =params.slug?.split("-in-")?.[1];
+const city = params.slug?.split("-in-")[1]?.replaceAll("-", " ");
 
   const [isFormOpen, setIsFormOpen] = useState(false)
   const faqs = [
     {
-      q: `1. What types of bar bending machines do you supply in ${params.slug}?`,
+      q: `1. What types of bar bending machines do you supply in ${city}?`,
       a: (
         <div>
           <p className="mb-2">
@@ -63,7 +63,7 @@ const Location = ({ heading, heading2 }) => {
       ),
     },
     {
-      q: `3. How quickly can I get a bar bending machine in ${params.slug}?`,
+      q: `3. How quickly can I get a bar bending machine in ${city}?`,
       a: (
         <div>
           <p className="mb-2">
@@ -102,7 +102,7 @@ const Location = ({ heading, heading2 }) => {
       ),
     },
     {
-      q: `6. What is the price range of your bar bending machines in ${params.slug}?`,
+      q: `6. What is the price range of your bar bending machines in ${city}?`,
       a: (
         <div>
           <p className="mb-2">
@@ -119,7 +119,7 @@ const Location = ({ heading, heading2 }) => {
       ),
     },
     {
-      q: `7. Why should I choose Shree Shakti Infratech as my bar bending machine supplier in ${params.slug}?`,
+      q: `7. Why should I choose Shree Shakti Infratech as my bar bending machine supplier in ${city}?`,
       a: (
         <div>
           <p className="mb-2">Key reasons:</p>
